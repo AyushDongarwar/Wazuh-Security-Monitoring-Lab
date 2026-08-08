@@ -93,7 +93,8 @@ The output confirmed that wazuh-remoted was listening on 0.0.0.0:1514.
 The Ubuntu machine was selected as the endpoint to be monitored. Because Ubuntu is Debian-based and the VM uses an x86_64/amd64 architecture, the DEB amd64 Wazuh Agent package was used.
 ```text
 wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.14.7-1_amd64.deb
-sudo WAZUH_MANAGER='<MANAGER-IP>' WAZUH_AGENT_GROUP='default' WAZUH_AGENT_NAME='ubuntu' dpkg -i ./wazuh-agent_4.14.7-1_amd64.deb
+sudo WAZUH_MANAGER='<MANAGER-IP>' WAZUH_AGENT_GROUP='default'
+WAZUH_AGENT_NAME='ubuntu' dpkg -i ./wazuh-agent_4.14.7-1_amd64.deb
 ```
 The package installation completed successfully and the Wazuh agent service was started and enabled.
 ```text
